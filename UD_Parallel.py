@@ -57,7 +57,6 @@ class UniformDesignSampler(BaseSampler):
             )
             study._storage.set_trial_system_attr(trial._trial_id, "grid_id", trial.number)
         else:
-            # Handle case where we have exhausted the current grid
             target_grids = self._get_unvisited_grid_ids(study)
             if len(target_grids) == 0:
                 # Handle the case when no grids are left
