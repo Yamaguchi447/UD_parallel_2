@@ -59,7 +59,6 @@ class UniformDesignSampler(BaseSampler):
         else:
             target_grids = self._get_unvisited_grid_ids(study)
             if len(target_grids) == 0:
-                # Handle the case when no grids are left
                 _logger.warning(
                     "UniformDesignSampler is re-evaluating a configuration because the grid has been exhausted."
                 )
